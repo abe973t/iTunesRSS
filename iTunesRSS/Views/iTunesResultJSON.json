@@ -1,0 +1,279 @@
+{
+  "feed": {
+    "title": "(MOCK DATA) Top Albums (MOCK DATA)",
+    "id": "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/10/explicit.json",
+    "author": {
+      "name": "iTunes Store",
+      "uri": "http://wwww.apple.com/us/itunes/"
+    },
+    "links": [
+      {
+        "self": "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/10/explicit.json"
+      },
+      {
+        "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?genreId=34&popId=82&app=music"
+      }
+    ],
+    "copyright": "Copyright © 2018 Apple Inc. All rights reserved.",
+    "country": "us",
+    "icon": "http://itunes.apple.com/favicon.ico",
+    "updated": "2020-04-14T02:06:44.000-07:00",
+    "results": [
+      {
+        "artistName": "Tory Lanez",
+        "id": "1506269876",
+        "releaseDate": "2020-04-10",
+        "name": "The New Toronto 3",
+        "kind": "album",
+        "copyright": "℗ 2020 Interscope Records",
+        "artistId": "440458549",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/tory-lanez/440458549?app=music",
+        "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/93/a3/84/93a3841d-63f3-bc8c-9e4c-bc714c090ca8/20UMGIM22468.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/the-new-toronto-3/1506269876?app=music"
+      },
+      {
+        "artistName": "Rod Wave",
+        "id": "1504192331",
+        "releaseDate": "2020-04-03",
+        "name": "Pray 4 Love",
+        "kind": "album",
+        "copyright": "℗ 2020 Alamo Records",
+        "artistId": "1140623439",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/rod-wave/1140623439?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/b8/ee/da/b8eedac6-2344-482f-a51f-5a95ec0d5759/14447.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/pray-4-love/1504192331?app=music"
+      },
+      {
+        "artistName": "Lil Baby",
+        "id": "1498988850",
+        "releaseDate": "2020-02-28",
+        "name": "My Turn",
+        "kind": "album",
+        "copyright": "Quality Control Music/Motown Records; ℗ 2020 Quality Control Music, LLC, under exclusive license to UMG Recordings, Inc.",
+        "artistId": "1276656483",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/lil-baby/1276656483?app=music",
+        "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/dd/25/8c/dd258c8a-f804-785f-1268-ad3cac0db873/20UMGIM04591.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/my-turn/1498988850?app=music"
+      },
+      {
+        "artistName": "Lil Uzi Vert",
+        "id": "1502707380",
+        "releaseDate": "2020-03-13",
+        "name": "Eternal Atake (Deluxe) - LUV vs. The World 2",
+        "kind": "album",
+        "copyright": "℗ 2020 Atlantic Recording Corporation",
+        "artistId": "940710524",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/lil-uzi-vert/940710524?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/78/7a/e3/787ae30d-0b60-e5b8-87fe-9d43bc157c47/075679820310.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/eternal-atake-deluxe-luv-vs-the-world-2/1502707380?app=music"
+      },
+      {
+        "artistName": "Bad Bunny",
+        "id": "1500776322",
+        "releaseDate": "2020-02-29",
+        "name": "YHLQMDLG",
+        "kind": "album",
+        "copyright": "℗ 2020 Rimas Entertainment LLC",
+        "artistId": "1126808565",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/bad-bunny/1126808565?app=music",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ca/0e/31/ca0e3104-fe92-1985-65ba-3474808f0948/195081078724.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1119",
+            "name": "Urbano latino",
+            "url": "https://itunes.apple.com/us/genre/id1119"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          },
+          {
+            "genreId": "12",
+            "name": "Latino",
+            "url": "https://itunes.apple.com/us/genre/id12"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/yhlqmdlg/1500776322?app=music"
+      },
+      {
+        "artistName": "Jhené Aiko",
+        "id": "1500821043",
+        "releaseDate": "2020-03-06",
+        "name": "Chilombo",
+        "kind": "album",
+        "copyright": "℗ 2020 Def Jam Recordings, a division of UMG Recordings, Inc.",
+        "artistId": "198431322",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/jhen%C3%A9-aiko/198431322?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/a3/95/9d/a3959d3e-cca0-a300-ba5e-637ca57bab84/20UMGIM09141.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "15",
+            "name": "R&B/Soul",
+            "url": "https://itunes.apple.com/us/genre/id15"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/chilombo/1500821043?app=music"
+      },
+      {
+        "artistName": "YoungBoy Never Broke Again",
+        "id": "1498288784",
+        "releaseDate": "2020-02-21",
+        "name": "Still Flexin, Still Steppin",
+        "kind": "album",
+        "copyright": "℗ 2020 Never Broke Again, LLC",
+        "artistId": "1168822104",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/youngboy-never-broke-again/1168822104?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/29/b7/5e/29b75e4e-3354-0cc3-684d-f6f1e65a39ea/075679824066.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/still-flexin-still-steppin/1498288784?app=music"
+      },
+      {
+        "artistName": "The Weeknd",
+        "id": "1505683705",
+        "releaseDate": "2020-03-20",
+        "name": "After Hours (Deluxe)",
+        "kind": "album",
+        "copyright": "℗ 2020 The Weeknd XO, Inc., marketed by Republic Records, a division of UMG Recordings, Inc.",
+        "artistId": "479756766",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/the-weeknd/479756766?app=music",
+        "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/37/97/07/37970734-8bb1-25ba-d465-9b79d32451be/20UMGIM21166.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "15",
+            "name": "R&B/Soul",
+            "url": "https://itunes.apple.com/us/genre/id15"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/after-hours-deluxe/1505683705?app=music"
+      },
+      {
+        "artistName": "Don Toliver",
+        "id": "1502318851",
+        "releaseDate": "2020-03-13",
+        "name": "Heaven Or Hell",
+        "kind": "album",
+        "copyright": "℗ 2020 Cactus Jack / Atlantic",
+        "artistId": "1237012992",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/don-toliver/1237012992?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/1b/bb/11/1bbb1185-90dd-a940-d80c-668b369a6a3d/075679823908.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/heaven-or-hell/1502318851?app=music"
+      },
+      {
+        "artistName": "Roddy Ricch",
+        "id": "1490463311",
+        "releaseDate": "2019-12-06",
+        "name": "Please Excuse Me For Being Antisocial",
+        "kind": "album",
+        "copyright": "℗ 2019 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States. A Warner Music Group Company",
+        "artistId": "1212442072",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/roddy-ricch/1212442072?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/ec/4b/79/ec4b7992-978e-7ece-208b-c098b7ef4023/075679829085.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/please-excuse-me-for-being-antisocial/1490463311?app=music"
+      }
+    ]
+  }
+}

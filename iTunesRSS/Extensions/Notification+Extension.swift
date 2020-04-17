@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+extension Notification.Name {
+    static let reload = Notification.Name("reload")
+}

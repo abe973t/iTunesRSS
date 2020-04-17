@@ -13,9 +13,11 @@ extension UIImageView {
         if let cachedImg = cache.object(forKey: link as NSString) {
             self.image = cachedImg
         } else if let url = URL(string: link) {
+            // TODO: change this to your custom networking layer
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
                 DispatchQueue.main.async {
-                    self.contentMode =  contentMode
+                    self.contentMode = contentMode
+                    
                     if let data = data, let img = UIImage(data: data) {
                         self.image = img
                         cache.setObject(img, forKey: link as NSString)

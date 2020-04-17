@@ -7,9 +7,44 @@
 //
 
 import XCTest
+import OHHTTPStubs
+@testable import iTunesRSS
+
+class MockViewModel: ViewModelProtocol {
+    
+    var albums: [Results]?
+    var cache: NSCache<NSString, UIImage> = NSCache<NSString, UIImage>()
+    
+    init() {
+        fetchTop100Albums()
+    }
+    
+    func fetchTop100Albums() {
+        albums = [
+            Results(artistName: "Lil Uzi Vert", releaseDate: "04-01-2017", name: "Luv Is Rage 2", copyright: "Atlantic", artworkUrl100: nil, genres: nil, url: nil),
+            Results(artistName: "The Weeknd", releaseDate: "04-01-2020", name: "After Hours", copyright: "XOTWOD", artworkUrl100: nil, genres: nil, url: nil)
+        ]
+    }
+    
+    // TODO: test this bit too
+    func fetchAlbum(index: Int) -> Results? {
+        return albums![index]
+    }
+    
+    func createDetailViewController(albumIndex: Int) -> DetailViewController {
+        let dVC = DetailViewController()
+        dVC.album = albums![albumIndex]
+        dVC.viewModel = self
+        return dVC
+    }
+}
 
 class iTunesRSSTests: XCTestCase {
-
+    
+    let viewModel = MockViewModel()
+    let mainViewController = MainViewController()
+    var detailViewController: DetailViewController?
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -17,17 +52,83 @@ class iTunesRSSTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testAlbumsCreated() {
+        XCTAssertNotNil(viewModel.albums)
+        XCTAssertEqual(viewModel.albums?.count, 2)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    func testCreateDetailVC() {
+        let mockDetailVC = viewModel.createDetailViewController(albumIndex: 0)
+        
+        XCTAssertTrue(mockDetailVC is DetailViewController)
+    }
+    
+    func testDecoding() throws {
+        let jsonPath = try XCTUnwrap(Bundle.main.path(forResource: "iTunesResultJSON", ofType: "json"))
+        let jsonPathURL = URL(fileURLWithPath: jsonPath)
+        let jsonData = try Data(contentsOf: jsonPathURL)
+        
+        XCTAssertNoThrow(try JSONDecoder().decode(iTunesResults.self, from: jsonData))
+    }
+    
+    func testNetworkManagerGET() {
+        let semaphore = DispatchSemaphore(value: 0)
+        let nm = NetworkManager.shared
+        let url = URL(string: Constants.rssEndpoint.rawValue)!
+        let invalidURL = URL(string: "itunes.com")!
+        
+        stub(condition: isHost("rss.itunes.apple.com")) { _ in
+            return fixture(filePath: Bundle.main.path(forResource: "iTunesResultJSON", ofType: "json")!, headers: nil)
+        }
+        
+        nm.get(url: url) { (data, error) in
+            if let error = error {
+                XCTFail(error.localizedDescription)
+            } else {
+                // test that the stubbing actually works
+                let response = String(decoding: data!, as: UTF8.self)
+                XCTAssertTrue(response.contains("MOCK DATA"))
+            }
+            
+            semaphore.signal()
+        }
+        
+        nm.get(url: invalidURL) { (data, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(data)
+        }
+        
+        if semaphore.wait(timeout: DispatchTime.now() + .seconds(3)) == .timedOut {
+            XCTFail("timed out")
         }
     }
-
+    
+    func testNetworkManagerPOST() {
+        let semaphore = DispatchSemaphore(value: 0)
+        let nm = NetworkManager.shared
+        let url = URL(string: Constants.rssEndpoint.rawValue)!
+        let invalidURL = URL(string: "itunes.com")!
+        
+        stub(condition: isHost("rss.itunes.apple.com")) { _ in
+            return fixture(filePath: Bundle.main.path(forResource: "iTunesResultJSON", ofType: "json")!, headers: nil)
+        }
+        
+        nm.post(url: url, headers: [:], data: nil) { (data, error) in
+            if let error = error {
+                XCTFail(error.localizedDescription)
+            }
+            
+            semaphore.signal()
+        }
+        
+        nm.post(url: invalidURL, headers: [:], data: nil) { (data, error) in
+            XCTAssertNotNil(error)
+            XCTAssertNil(data)
+        }
+        
+        if semaphore.wait(timeout: DispatchTime.now() + .seconds(3)) == .timedOut {
+            XCTFail("timed out")
+        }
+    }
 }

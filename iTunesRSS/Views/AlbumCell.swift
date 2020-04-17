@@ -9,7 +9,7 @@
 import UIKit
 
 class AlbumCell: UITableViewCell {
-
+    
     let albumImg: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,6 +49,9 @@ class AlbumCell: UITableViewCell {
     }
 
     func addConstraints() {
+        let contentViewHeightConstraint = contentView.heightAnchor.constraint(equalToConstant: 95)
+        contentViewHeightConstraint.priority = UILayoutPriority(rawValue: 999)
+        
         NSLayoutConstraint.activate([
             albumImg.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             albumImg.topAnchor.constraint(equalTo: topAnchor, constant: 10),
@@ -62,7 +65,17 @@ class AlbumCell: UITableViewCell {
             
             artistLabel.bottomAnchor.constraint(equalTo: albumImg.bottomAnchor),
             artistLabel.leadingAnchor.constraint(equalTo: albumLabel.leadingAnchor),
-            artistLabel.trailingAnchor.constraint(equalTo: albumLabel.trailingAnchor)
+            artistLabel.trailingAnchor.constraint(equalTo: albumLabel.trailingAnchor),
+            
+            contentViewHeightConstraint
         ])
+    }
+    
+    func setup(album: Results, cache: NSCache<NSString, UIImage>) {
+        if let albumImgURL = album.artworkUrl100, let albumName = album.name, let artistName = album.artistName {
+            albumImg.downloadImageFrom(link: albumImgURL, contentMode: .scaleAspectFit, cache: cache)
+            albumLabel.text = albumName
+            artistLabel.text = artistName
+        }
     }
 }

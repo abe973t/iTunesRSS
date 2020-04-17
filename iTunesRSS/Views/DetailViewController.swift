@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var album: Results!
-    var cache: NSCache<NSString, UIImage>!
+    var viewModel: ViewModelProtocol!
     
     let albumImg: UIImageView = {
         let imgView = UIImageView()
@@ -69,18 +69,22 @@ class DetailViewController: UIViewController {
         return btn
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+        
+        addViews()
+        setupView()
+    }
+    
     @objc func openLink() {
         if let urlString = album.url, let url = URL(string: urlString) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        addViews()
-        
-        albumImg.downloadImageFrom(link: album.artworkUrl100 ?? "", contentMode: .scaleAspectFit, cache: cache)
+    fileprivate func setupView() {
+        albumImg.downloadImageFrom(link: album.artworkUrl100 ?? "", contentMode: .scaleAspectFit, cache: viewModel.cache)
         artistLabel.text = album.artistName ?? "Artist N/A"
         albumLabel.text = album.name ?? "Title N/A"
         releaseDateLabel.text = "Release Date: \(album.releaseDate ?? "N/A")"
