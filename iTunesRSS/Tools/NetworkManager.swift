@@ -29,6 +29,7 @@ class NetworkManager {
         task.resume()
     }
     
+    // TODO: make this generic somehow
     func post(url: URL, headers: [String: String], data: Data?, completion: @escaping (Data?, Error?) -> ()) {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
