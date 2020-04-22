@@ -28,6 +28,13 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(AlbumCell.self, forCellReuseIdentifier: "cell")
+        
+        let postURL = URL(string: "http://dummy.restapiexample.com/api/v1/create")!
+        let method = HTTPMethod.post("Some String that better work")
+        let resource = ResourceObject<String>(method: method, url: postURL)
+        NetworkingManager.shared.loadObject(resource: resource) { (someObject, request, err) in
+            
+        }
     }
     
     @objc func reloadTableData(_ notification: Notification) {

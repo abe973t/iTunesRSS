@@ -11,6 +11,10 @@
 		0441062A2445DEEE00BC7F1F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044106292445DEEE00BC7F1F /* ViewModel.swift */; };
 		0441062C2445ED1100BC7F1F /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441062B2445ED1100BC7F1F /* Notification+Extension.swift */; };
 		044106372445F60F00BC7F1F /* iTunesRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044106362445F60F00BC7F1F /* iTunesRSSTests.swift */; };
+		046455DD244F50590097FE22 /* URLRequest+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046455DC244F50590097FE22 /* URLRequest+init.swift */; };
+		046455DF244F50BD0097FE22 /* ResourceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046455DE244F50BD0097FE22 /* ResourceObject.swift */; };
+		046455E1244F50D50097FE22 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046455E0244F50D50097FE22 /* HTTPMethod.swift */; };
+		046455E3244F50FC0097FE22 /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046455E2244F50FC0097FE22 /* ImageResource.swift */; };
 		049CD93A244E232600B075D7 /* iTunesRSSNetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CD939244E232600B075D7 /* iTunesRSSNetworkLayerTests.swift */; };
 		049D23F1243F500400013BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D23F0243F500400013BC6 /* AppDelegate.swift */; };
 		049D23F3243F500400013BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D23F2243F500400013BC6 /* SceneDelegate.swift */; };
@@ -22,6 +26,7 @@
 		049D240B243F59ED00013BC6 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D240A243F59ED00013BC6 /* AlbumCell.swift */; };
 		049D240D243F652E00013BC6 /* UIImageView+downloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D240C243F652E00013BC6 /* UIImageView+downloadImage.swift */; };
 		049D240F243F687D00013BC6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D240E243F687D00013BC6 /* DetailViewController.swift */; };
+		049DA9662450896D0024D792 /* nt3.png in Resources */ = {isa = PBXBuildFile; fileRef = 049DA9652450896D0024D792 /* nt3.png */; };
 		04A18AA124463B470058CAC6 /* iTunesResultJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A18AA024463B470058CAC6 /* iTunesResultJSON.json */; };
 		1C0AFC2D5951DB0E062FAC3A /* Pods_iTunesRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04089ECB244E273400A55BBC /* Pods_iTunesRSS.framework */; };
 		3ADFC823D2BC5B9E1576A7F1 /* Pods_iTunesRSSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7212BF72D3873E555DF826 /* Pods_iTunesRSSTests.framework */; };
@@ -67,6 +72,10 @@
 		044106342445F60F00BC7F1F /* iTunesRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044106362445F60F00BC7F1F /* iTunesRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesRSSTests.swift; sourceTree = "<group>"; };
 		044106382445F60F00BC7F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046455DC244F50590097FE22 /* URLRequest+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+init.swift"; sourceTree = "<group>"; };
+		046455DE244F50BD0097FE22 /* ResourceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceObject.swift; sourceTree = "<group>"; };
+		046455E0244F50D50097FE22 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		046455E2244F50FC0097FE22 /* ImageResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
 		049CD937244E232600B075D7 /* iTunesRSSNetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesRSSNetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		049CD939244E232600B075D7 /* iTunesRSSNetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesRSSNetworkLayerTests.swift; sourceTree = "<group>"; };
 		049CD93B244E232600B075D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 		049D240A243F59ED00013BC6 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		049D240C243F652E00013BC6 /* UIImageView+downloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadImage.swift"; sourceTree = "<group>"; };
 		049D240E243F687D00013BC6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		049DA9652450896D0024D792 /* nt3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nt3.png; sourceTree = "<group>"; };
 		04A18AA024463B470058CAC6 /* iTunesResultJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = iTunesResultJSON.json; path = iTunesRSS/Views/iTunesResultJSON.json; sourceTree = SOURCE_ROOT; };
 		0F78FFD2DD74AAB4094A9281 /* Pods-iTunesRSSNetworkLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesRSSNetworkLayerTests.debug.xcconfig"; path = "Target Support Files/Pods-iTunesRSSNetworkLayerTests/Pods-iTunesRSSNetworkLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58DC1E274D2279E49E2B6159 /* Pods-iTunesRSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesRSS.debug.xcconfig"; path = "Target Support Files/Pods-iTunesRSS/Pods-iTunesRSS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,12 +133,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0441062F2445F33800BC7F1F /* Tools */ = {
+		0441062F2445F33800BC7F1F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				0441062D2445F32C00BC7F1F /* NetworkManager.swift */,
+				046455DC244F50590097FE22 /* URLRequest+init.swift */,
+				046455E0244F50D50097FE22 /* HTTPMethod.swift */,
+				046455DE244F50BD0097FE22 /* ResourceObject.swift */,
+				046455E2244F50FC0097FE22 /* ImageResource.swift */,
 			);
-			path = Tools;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		044106352445F60F00BC7F1F /* iTunesRSSTests */ = {
@@ -162,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				04A18AA024463B470058CAC6 /* iTunesResultJSON.json */,
+				049DA9652450896D0024D792 /* nt3.png */,
 				049D2406243F588700013BC6 /* iTunesResults.swift */,
 				049D2408243F59B200013BC6 /* Constants.swift */,
 			);
@@ -218,7 +233,7 @@
 				0473201324486ABC00729266 /* View Model */,
 				04966F762444A8FD00DB2FE7 /* Model */,
 				04966F772444A91400DB2FE7 /* Extensions */,
-				0441062F2445F33800BC7F1F /* Tools */,
+				0441062F2445F33800BC7F1F /* Networking */,
 				049D23F9243F500900013BC6 /* Assets.xcassets */,
 				049D23FE243F500900013BC6 /* Info.plist */,
 			);
@@ -375,6 +390,7 @@
 				049D2405243F50AF00013BC6 /* Coding Assignment.rtf in Resources */,
 				049D23FA243F500900013BC6 /* Assets.xcassets in Resources */,
 				04A18AA124463B470058CAC6 /* iTunesResultJSON.json in Resources */,
+				049DA9662450896D0024D792 /* nt3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,11 +505,15 @@
 			files = (
 				049D2409243F59B200013BC6 /* Constants.swift in Sources */,
 				0441062A2445DEEE00BC7F1F /* ViewModel.swift in Sources */,
+				046455E1244F50D50097FE22 /* HTTPMethod.swift in Sources */,
 				049D2407243F588700013BC6 /* iTunesResults.swift in Sources */,
+				046455E3244F50FC0097FE22 /* ImageResource.swift in Sources */,
 				049D23F5243F500400013BC6 /* MainViewController.swift in Sources */,
 				042855B6244E249600D6E9F5 /* NetworkManager.swift in Sources */,
 				049D23F1243F500400013BC6 /* AppDelegate.swift in Sources */,
+				046455DF244F50BD0097FE22 /* ResourceObject.swift in Sources */,
 				049D23F3243F500400013BC6 /* SceneDelegate.swift in Sources */,
+				046455DD244F50590097FE22 /* URLRequest+init.swift in Sources */,
 				049D240D243F652E00013BC6 /* UIImageView+downloadImage.swift in Sources */,
 				049D240B243F59ED00013BC6 /* AlbumCell.swift in Sources */,
 				0441062C2445ED1100BC7F1F /* Notification+Extension.swift in Sources */,

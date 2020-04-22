@@ -30,18 +30,14 @@ class ViewModel: ViewModelProtocol {
     
     func fetchTop100Albums() {
         if let url = URL(string: Constants.rssEndpoint.rawValue) {
-            NetworkManager.shared.get(url: url) { (data, err) in
-                if let data = data {
-                    do {
-                        let result = try JSONDecoder().decode(iTunesResults.self, from: data)
-                        
-                        if let fetchedAlbums = result.feed?.results {
-                            self.albums = fetchedAlbums
-                            NotificationCenter.default.post(name: .reload, object: nil)
-                        }
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+            let resource = ResourceObject<iTunesResults>(method: .get, url: url)
+            
+            NetworkingManager.shared.loadObject(resource: resource) { (result, request, err) in
+                if let error = err {
+                    print(error.localizedDescription)
+                } else if let parsedResult = result, let fetchedAlbums = parsedResult.feed?.results {
+                    self.albums = fetchedAlbums
+                    NotificationCenter.default.post(name: .reload, object: nil)
                 }
             }
         }
